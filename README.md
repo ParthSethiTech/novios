@@ -1,3 +1,5 @@
+You can easily acces via: noviosapp.herokuapp.com
+
 In a terminal window, navigate into your novios directory.
 
 Run pip3 install -r requirements.txt in your terminal window to make sure that all of the necessary Python packages (Flask and SQLAlchemy, for instance) are installed.
