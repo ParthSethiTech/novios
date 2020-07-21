@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/signupStyles.css')}}" />        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+    <h1  class = "heading">Chapter 0: Sign Up</h1>
+    <form action="{{ url_for('signup') }}" method = "post">
+        <div class = "login-box">
+          <h1>Sign Up</h1>
+          
+          <div class="textbox">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <input type="email" placeholder="Enter your email-id" name = "email">
+          </div>
+          
+          <div class="textbox">
+            <i class = "fa fa-user" aria-hidden="true"></i>
+            <input type="text" placeholder="Username" name = "username">
+          </div>
+    
+          <div class="textbox">
+            <i class = "fa fa-lock" aria-hidden="true" ></i>
+            <input type="password" placeholder="Password" name = "password" minlength = "8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+          </div>
+
+          <div class="textbox">
+            <i class = "fa fa-lock" aria-hidden="true" ></i>
+            <input type="password" placeholder="Re-enter Password" name = "repass">
+          </div>
+
+          
+
+          <button class= "btn">Sign Up</button>
+          <p>Click to <a href="{{ url_for('index') }}">Sign In</a></p>
+          <p class = "error">{{ warn }}</p>
+          <p class = "success">{{ success }}</p>
+        </div>
+      </form>
+</body>
+</html>

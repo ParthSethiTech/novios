@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crete+Round:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #d1d1d1;
+  padding: 20px;
+  background: linear-gradient(to left, #8942a8, #ba382f);
+}
+
+nav-content {
+  color: green;
+  font-weight: 500;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 10px;
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: transparent;
+  position: sticky;
+  top: 0;
+}
+.left-side > a {
+  padding-left: 5px;
+  text-decoration: none;
+  color: #808080;
+  border-bottom: 2px solid transparent;
+}
+
+.right-side {
+  padding: 3px;
+}
+
+#home {
+  border-bottom: 2px solid black;
+  color: black;
+}
+
+#difference:hover {
+  transition: 2s ease;
+  border-bottom: 2px solid black;
+  color: black;
+}
+#democracy:hover {
+  transition: 2s ease;
+  border-bottom: 2px solid black;
+  color: black;
+}
+#systems:hover {
+  transition: 2s ease;
+  border-bottom: 2px solid black;
+  color: black;
+}
+
+#broad:hover {
+  transition: 2s ease;
+  border-bottom: 2px solid black;
+  color: black;
+}
+
+h1 {
+  font-family: "Noto Sans JP", sans-serif;
+  margin-left: 5px;
+}
+
+form {
+  padding: 10px;
+  font-size: 18px;
+}
+
+ul {
+  padding: 10px;
+  font-size: 20px;
+  font-family: "Noto Sans JP", sans-serif;
+  padding: 2px;
+  margin-left: 10px;
+}
+
+form label,
+button,
+input {
+  font-size: 18px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+p {
+  color: gold;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.greeting {
+  text-transform: capitalize;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    position: relative;
+    display: contents;
+    top: 0;
+  }
+  #home,
+  #difference,
+  #democracy,
+  #systems,
+  #broad {
+    display: block;
+  }
+}

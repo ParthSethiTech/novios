@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/indexStyles.css')}}"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in</title>
+  </head>
+  <body>
+    <h1>Novios-Discuss</h1>
+    <!--Login-->
+    <p class="info">Clear all your doubts for Novios.</p>
+    <form action="{{ url_for('login') }}" method="post">
+      <div class="login-box">
+        <h1>Login</h1>
+
+        <div class="textbox">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <input type="text" placeholder="Username" name="username" />
+        </div>
+
+        <div class="textbox">
+          <i class="fa fa-lock" aria-hidden="true"></i>
+          <input type="password" placeholder="Password" name="password" />
+        </div>
+
+        <button class="btn">Sign in</button>
+        <p class="signup">
+          New here? Click to <a href="{{ url_for('signInLink') }}">Sign Up</a>
+        </p>
+        <p class="error">{{ warn }}</p>
+      </div>
+    </form>
+  </body>
+</html>

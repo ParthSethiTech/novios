@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css')}}"
+    />
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Novios</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="navbar-nav">
+        <li class="logo">
+          <a href="#" class="nav-link">
+            <span class="link-text">NOVIOS </span>
+            <img
+              src="https://cdn.discordapp.com/attachments/730666520291704872/732176970699505684/logo_good_one.png"
+              alt="Logo"
+              width="72px"
+              height="72px"
+            />
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#home" class="nav-link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="32"
+              height="32"
+              viewBox="0 0 26 26"
+              style="fill: #000000;"
+            >
+              <path
+                fill="currentColor"
+                d="M 20 2.03125 C 19.449219 2.03125 19 2.480469 19 3.03125 L 19 7.8125 L 13.71875 2.53125 C 13.328125 2.140625 12.671875 2.140625 12.28125 2.53125 L 0.5625 14.28125 C 0.171875 14.671875 0.171875 15.296875 0.5625 15.6875 C 0.953125 16.078125 1.578125 16.078125 1.96875 15.6875 L 13 4.65625 L 24.0625 15.71875 C 24.257813 15.914063 24.523438 16.03125 24.78125 16.03125 C 25.039063 16.03125 25.273438 15.914063 25.46875 15.71875 C 25.859375 15.328125 25.859375 14.703125 25.46875 14.3125 L 22 10.84375 L 22 3.03125 C 22 2.480469 21.550781 2.03125 21 2.03125 Z M 13 6.5 L 2 17.5 L 2 23 C 2 24.65625 3.34375 26 5 26 L 21 26 C 22.65625 26 24 24.65625 24 23 L 24 17.5 Z M 11 16 L 15 16 C 15.550781 16 16 16.449219 16 17 L 16 23 C 16 23.550781 15.550781 24 15 24 L 11 24 C 10.449219 24 10 23.550781 10 23 L 10 17 C 10 16.449219 10.449219 16 11 16 Z"
+                class="fa-secondary"
+              ></path>
+              <path fill="currentColor" class="fa-primary"></path>
+            </svg>
+            <span class="link-text">Home</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#why" class="nav-link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="50"
+              height="50"
+              viewBox="0 0 50 50"
+              style="fill: #000000;"
+            >
+              <path
+                fill="currentColor"
+                d="M 25 2 C 12.309295 2 2 12.309295 2 25 C 2 37.690705 12.309295 48 25 48 C 37.690705 48 48 37.690705 48 25 C 48 12.309295 37.690705 2 25 2 z M 25 4 C 36.609824 4 46 13.390176 46 25 C 46 36.609824 36.609824 46 25 46 C 13.390176 46 4 36.609824 4 25 C 4 13.390176 13.390176 4 25 4 z M 25 11 A 3 3 0 0 0 22 14 A 3 3 0 0 0 25 17 A 3 3 0 0 0 28 14 A 3 3 0 0 0 25 11 z M 21 21 L 21 23 L 22 23 L 23 23 L 23 36 L 22 36 L 21 36 L 21 38 L 22 38 L 23 38 L 27 38 L 28 38 L 29 38 L 29 36 L 28 36 L 27 36 L 27 21 L 26 21 L 22 21 L 21 21 z"
+                class="fa-secondary"
+              ></path>
+              <path fill="currentColor" class="fa-primary"></path>
+            </svg>
+            <span class="link-text">Why Novios?</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="{{ url_for('index') }}" class="nav-link">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fad"
+              data-icon="space-station-moon-alt"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="svg-inline--fa fa-space-station-moon-alt fa-w-16 fa-5x"
+            >
+              <g class="fa-group">
+                <circle xmlns="http://www.w3.org/2000/svg" cx="256" cy="378.5" r="25" fill = "currentColor" class="fa-secondary"></circle>
+                <path xmlns="http://www.w3.org/2000/svg" d="M256,0C114.516,0,0,114.497,0,256c0,141.484,114.497,256,256,256c141.484,0,256-114.497,256-256     C512,114.516,397.503,0,256,0z M256,472c-119.377,0-216-96.607-216-216c0-119.377,96.607-216,216-216     c119.377,0,216,96.607,216,216C472,375.377,375.393,472,256,472z" fill = "currentColor" class="fa-secondary">
+              </path>
+
+                <path xmlns="http://www.w3.org/2000/svg" d="M256,128.5c-44.112,0-80,35.888-80,80c0,11.046,8.954,20,20,20s20-8.954,20-20c0-22.056,17.944-40,40-40     c22.056,0,40,17.944,40,40c0,22.056-17.944,40-40,40c-11.046,0-20,8.954-20,20v50c0,11.046,8.954,20,20,20     c11.046,0,20-8.954,20-20v-32.531c34.466-8.903,60-40.26,60-77.469C336,164.388,300.112,128.5,256,128.5z" fill = "currentColor" class="fa-secondary"></path>
+                  </path>
+                  <path fill="currentColor" class="fa-primary"></path>
+              </g>
+            </svg>
+            <span class="link-text">Ask Your Questions</span>
+          </a>
+        </li>
+
+        
+
+      </ul>
+    </nav>
+
+    
+
+    <main>
+      
+      <div class="content" id="home">
+        <img
+          src="https://cdn.discordapp.com/attachments/730666520291704872/732176970699505684/logo_good_one.png"
+          alt="Logo"
+          height="100px"
+          width="100px"
+        />
+        <br /><br /><br /><br /><br />
+        <div class="container">
+          <h1 class="typed">
+            Novios is <span class="typed-text"></span
+              ><span class="cursor">&nbsp;</span>
+          </h1>
+        </div>
+
+        <div class="iframe-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/kGiVT0gaHX8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="content" id="why">
+        <h1 class="why">Why Novios?</h1>
+        <p>Click below on the tabs to read more</p>
+
+        <button class="collapse">
+          We Love our Audio <span class="red">Easy</span>
+        </button>
+        <div class="panel">
+          Novios has many great audio editing features built-in, such as displaying waveforms on the timeline, or even rendering the waveform as part of your video. You can also split the audio from your video clip, and adjust each audio channel individually.
+        </div>
+        <button class="collapse">
+          <span class="red">Cool</span> Effects
+        </button>
+        <div class="panel">
+          Novios consists of normal to very advanced effects that could be applied to various things in only a few clicks
+        </div>
+        <button class="collapse">
+          <span class="red">Deadly</span> Plugins
+        </button>
+        <div class="panel">
+          Plugins are made after testing them properly and are specially made for advanced designing
+        </div>
+        <button class="collapse">
+          <span class="red">Friendly</span> interface
+        </button>
+        <div class="panel">
+          Everything is labelled properly so that users could refer to them and use a feature accordingly
+        </div>
+        <button class="collapse">
+          <span class="red">Fast</span> rendering
+        </button>
+        <div class="panel">
+          Most video editors take minutes and sometimes even hours to render but novios reders in a few seconds only using multi-layer movie generation with lazy loading, so it loads as you watch.
+        </div>
+        <button class="collapse">
+          <span class="red">Global</span> Compatability
+        </button>
+        <div class="panel">
+          It is available for all operating existing softwares. So share it to everyone!
+        </div>
+        <button class="collapse">
+          <span class="red">Amazing</span> Tools
+        </button>
+        <div class="panel">
+          Software includes tools to convert file formats, cut segments (trimming), join clips, re-sequence clips, adjust brightness/contrast, rotate or crop footage, add sound or add transitions
+        </div>
+        <button class="collapse">
+          <span class="red">Fast and Simple</span> Startup
+        </button>
+        <div class="panel">
+          Our advanced video editing timeline has a ton of great features for helping you build a great video project. Dragging and dropping, resizing clips, zooming in and out, alignment, preset animations and settings, slicing, snapping, and more! Just drag a file onto the timeline to begin!
+        </div>
+        <button class="collapse">
+          <span class="red">Awesome</span> Visual Representation
+        </button>
+        <div class="panel">
+          When arranging clips in a video project, images on the higher tracks/layers will be displayed on top, and the lower tracks will be displayed behind them. Much like a stack of paper, items on top cover up items below them. And if you cut any holes out (i.e. transparency) the lower images will show though.
+        </div>
+        
+        <button class="collapse">
+          Layering made <span class="red">Simple</span>!
+        </button>
+        <div class="panel">
+          Tracks are used to layer images, videos, and audio in a project. You can create as many layers as needed, such as watermarks, background audio tracks, background videos... Any transparency will show through the layer below it. Tracks can also be moved up, down, or locked.
+        </div>
+        
+      </div>
+      <div class="content" id = "about">
+        <img
+              src="https://cdn.discordapp.com/attachments/730666520291704872/732176970699505684/logo_good_one.png"
+              alt="Logo"
+              width="72px"
+              height="72px"
+              class="about-logo"
+            />
+        
+        <h1 class="info-head">About Novios</h1>
+        <p class = "info">Novios is a free video editing software which is designed by two students from Delhi Public School Noida- Parth Sethi and Laksh Saini. An idea of a free and easy-to-use video editor was inspired by the struggles of our motion graphics editor. We hope you like the app as well as the website interface.</p>
+      </div>
+    </main>
+    <script src="{{ url_for('static', filename='javascript/app.js')}}"></script>
+    <div class="animation-container">
+    <div class="hand">
+      <div class="thumb"></div>
+      <div class="finger"></div>
+      <div class="finger"></div>
+      <div class="finger"></div>
+      <div class="finger"></div>
+    </div>
+    </div>
+    <h1 class="out">WAITING FOR RESULTS</h1>
+  </body>
+</html>
