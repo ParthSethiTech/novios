@@ -50,14 +50,14 @@
         <button class="btn">Post!</button>
       </form>
       <p class="success">
-        {{success2}}{{email}}
+        {{success2}}{{email[0]}}
       </p>
 
       <h1>Ask your questions and discuss here!</h1>
       {{msg}}
       <ul>
         {% for question in question_list%}
-        <li>{{question}}</li>
+        <li>{{question[0]}}</li>
         {% endfor %}
       </ul>
     </div>

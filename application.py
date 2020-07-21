@@ -46,8 +46,9 @@ def signInLink():
 @app.route('/ask')
 def ask():
     question_list = db.execute("SELECT question FROM questions").fetchall()
-    
-    return render_template('login.html', question_list = question_list)
+    email = ""
+    success = ""
+    return render_template('login.html', question_list = question_list, email=email, success=success)
 
 
 
@@ -68,8 +69,9 @@ def login():
     if user_check:
         username = username
         question_list = db.execute("SELECT question FROM questions").fetchall()
-
-        return render_template("login.html", username = username, question_list=question_list)
+        email = ""
+        success = ""
+        return render_template("login.html", username = username, question_list=question_list, email=email, success=success)
 
         
     warn = "Wrong Username Or Password"
@@ -78,14 +80,13 @@ def login():
 
 @app.route('/ask',methods = ["POST"])
 def postQ():
-    
     question_list = db.execute("SELECT question FROM questions").fetchall()
     
     
     question = request.form.get("question")
     
-    email = db.execute("SELECT email FROM users WHERE username = :username", {"username":username})
-    db.execute("INSERT INTO questions (question) VALUES (:question)", {"question":question})
+    email = db.execute("SELECT email FROM users WHERE username = :username", {"username":username}).fetchone()
+    db.execute("INSERT INTO questions (question, username) VALUES (:question, :username)", {"question":question, "username":username})
     db.execute("COMMIT")
     
     question_list = db.execute("SELECT question FROM questions").fetchall()
