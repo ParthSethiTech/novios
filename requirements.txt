@@ -1,4 +1,4 @@
-aiohttp==3.6.2
+aiohttp==3.7.4
 appdirs==1.4.4
 arcade==2.1.6
 async-timeout==3.0.1
