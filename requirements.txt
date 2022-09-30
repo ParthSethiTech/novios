@@ -39,7 +39,7 @@ importlib-metadata==1.7.0
 is-disposable-email==1.0.0
 itsdangerous==1.1.0
 Jinja2==2.11.2
-joblib==0.15.1
+joblib==1.2.0
 libchirp==1.2.1b3
 Markdown==3.2.2
 MarkupSafe==1.1.1
